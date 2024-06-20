@@ -31,38 +31,25 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 //        Disease parvovirus = new Disease();
-//        parvovirus.setName("Parvovirus");
+//        parvovirus.setName("Infectious canine Hepatitis");
 //        Set<Cause> parvovirusCauses = new HashSet<>();
-//        parvovirusCauses.add(new Cause("Lethargy"));
-//        parvovirusCauses.add(new Cause("Anorexia"));
-//        parvovirusCauses.add(new Cause("vomiting"));
-//        parvovirusCauses.add(new Cause("Diarrhea by blood"));
-//        parvovirusCauses.add(new Cause("drought"));
+//        parvovirusCauses.add(new Cause("Persistent cough"));
+//        parvovirusCauses.add(new Cause("Blue nasal discharge"));
+//        parvovirusCauses.add(new Cause("Fever"));
+////        parvovirusCauses.add(new Cause("Diarrhea by blood"));
+//        parvovirusCauses.add(new Cause("General weakness"));
 //        parvovirus.setCauses(parvovirusCauses);
 //        diseaseService.save(parvovirus);
 //
 //        Disease earInfection = new Disease();
-//        earInfection.setName("Ear infection");
+//        earInfection.setName("Worm infection");
 //        Set<Cause> earInfectionCauses = new HashSet<>();
-//        earInfectionCauses.add(new Cause("Ear swelling and redness"));
-//        earInfectionCauses.add(new Cause("ear secretion"));
-//        earInfectionCauses.add(new Cause("bad smell"));
+//        earInfectionCauses.add(new Cause("Stomach bloating"));
+//        earInfectionCauses.add(new Cause("Malnutrition"));
+//        earInfectionCauses.add(new Cause("Weight loss"));
+//        earInfectionCauses.add(new Cause("Hair loss"));
 //        earInfection.setCauses(earInfectionCauses);
 //        diseaseService.save(earInfection);
-//
-//        Set<Disease> diseases = new HashSet<>();
-//        Cause cause1 = causeService.findByDescriptionEqualsIgnoreCase("Lethargy");
-//        Disease disease = diseaseService.getByCause(cause1.getId());
-//        diseases.add(disease);
-//        System.out.println(disease);
-
-//        Vaccination vaccination = new Vaccination("45th Day","Seven-cell Vaccination");
-//        vaccinationService.save(vaccination);
-//        vaccination = new Vaccination("45th Day","Eight-cell Vaccination");
-//        vaccinationService.save(vaccination);
-//
-//        Set<Vaccination> vaccinations = vaccinationService.findAllByAge("45th Day");
-//        System.out.println(vaccinations);
 
     }
 }
