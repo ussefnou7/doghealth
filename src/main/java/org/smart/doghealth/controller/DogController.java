@@ -1,13 +1,7 @@
 package org.smart.doghealth.controller;
 
-import org.smart.doghealth.domain.Cause;
-import org.smart.doghealth.domain.Disease;
-import org.smart.doghealth.domain.Dog;
-import org.smart.doghealth.domain.Vaccination;
-import org.smart.doghealth.service.CauseService;
-import org.smart.doghealth.service.DiseaseService;
-import org.smart.doghealth.service.DogService;
-import org.smart.doghealth.service.VaccinationService;
+import org.smart.doghealth.domain.*;
+import org.smart.doghealth.service.*;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,12 +17,15 @@ public class DogController {
     private final CauseService causeService;
     private final DiseaseService diseaseService;
     private final VaccinationService vaccinationService;
+    private final ClinicService clinicService;
 
-    public DogController(DogService dogService, CauseService causeService, DiseaseService diseaseService, VaccinationService vaccinationService) {
+
+    public DogController(DogService dogService, CauseService causeService, DiseaseService diseaseService, VaccinationService vaccinationService, ClinicService clinicService) {
         this.dogService = dogService;
         this.causeService = causeService;
         this.diseaseService = diseaseService;
         this.vaccinationService = vaccinationService;
+        this.clinicService = clinicService;
     }
 
     @GetMapping("/list_causes")
@@ -52,12 +49,9 @@ public class DogController {
         dog.setVaccinations(vaccinations);
         return dog;
     }
-//    @GetMapping("/get_disease")
-//    public Set<Disease> getDisease() {
-//        Set<Disease> diseases = new HashSet<>();
-//        Cause cause1 = causeService.getByName("Anorexia");
-//        Disease disease = diseaseService.getByCause(cause1.getId());
-//        diseases.add(disease);
-//        return diseases;
-//    }
+    @GetMapping("/find_clinic")
+    public Clinic findClinic(@RequestParam String city) {
+        Clinic clinic = clinicService.findByCity(city);
+        return clinic;
+    }
 }
